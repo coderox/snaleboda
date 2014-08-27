@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
@@ -22,36 +23,29 @@ namespace Snaleboda.Library
         const string CONTACTS_URL = BASE_URL + "contacts";
         const string INCIDENTS_URL = BASE_URL + "incidents";
 
-        public async Task<IList<NewsModel>> GetNewsAsync()
+        public Task<IList<NewsModel>> GetNewsAsync()
         {
-            IList<NewsModel> result;
-            try
-            {
-                var client = new HttpClient();
-                var uri = new Uri(NEWS_URL, UriKind.Absolute);
-                var content = await client.GetStringAsync(uri);
-                result = JsonConvert.DeserializeObject<IList<NewsModel>>(content);
-            }
-            catch (Exception ex)
-            {
-                result = new List<NewsModel>();
-            }
-            return result;
+            return GetAsync<IList<NewsModel>>(NEWS_URL);
         }
 
-        public async Task<IList<ContactModel>> GetContactsAsync()
+        public Task<IList<ContactModel>> GetContactsAsync()
         {
-            IList<ContactModel> result;
+            return GetAsync<IList<ContactModel>>(CONTACTS_URL);            
+        }
+
+        private static async Task<T> GetAsync<T>(string url)
+        {
+            T result;
             try
             {
                 var client = new HttpClient();
                 var uri = new Uri(CONTACTS_URL, UriKind.Absolute);
                 var content = await client.GetStringAsync(uri);
-                result = JsonConvert.DeserializeObject<IList<ContactModel>>(content);
+                result = JsonConvert.DeserializeObject<T>(content);
             }
             catch (Exception ex)
             {
-                result = new List<ContactModel>();
+                result = default(T);
             }
             return result;
         }
@@ -65,9 +59,8 @@ namespace Snaleboda.Library
                 var json = JsonConvert.SerializeObject(incident);
                 var content = new StringContent(json);
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-                content.Headers.Add("X-ZUMO-APPLICATION", APPLICATION_KEY);                
-                var response = await client.PostAsync(uri, content);
-                Debug.WriteLine(response.IsSuccessStatusCode);
+                content.Headers.Add("X-ZUMO-APPLICATION", APPLICATION_KEY);
+                await client.PostAsync(uri, content);
             }
             catch
             {
