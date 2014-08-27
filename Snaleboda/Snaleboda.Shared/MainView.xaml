@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="Snaleboda.MainView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Snaleboda"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <Page.Resources>
+        <CollectionViewSource x:Name="newsCollection" IsSourceGrouped="False"/>
+        <CollectionViewSource x:Name="contactsCollection" IsSourceGrouped="False"/>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Hub>
+
+            <HubSection Header="välkommen"/>
+
+            <HubSection Header="nyheter">
+                <DataTemplate>
+                    <Grid>
+                        <ListView x:Name="newsList"
+                                  ItemsSource="{Binding Source={StaticResource newsCollection}}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Title}"/>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Header="kontakter">
+                <DataTemplate>
+                    <Grid>
+                        <ListView x:Name="contactsList"      
+                                  ItemsSource="{Binding Source={StaticResource contactsCollection}}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}"/>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+        </Hub>
+    </Grid>   
+    
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Label="rapportera" Icon="Stop"/>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
