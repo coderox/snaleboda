@@ -35,7 +35,14 @@ namespace Snaleboda
 
             try
             {
-                var serviceAgent = new ServiceAgent();
+                // Production
+                //var serviceAgent = new ServiceAgent();
+
+                // Faking the http stack
+                //var serviceAgent = new ServiceAgent(new FakeHttpClientProvider());
+
+                // Faking the service implementation
+                var serviceAgent = new FakeServiceAgent();
 
                 var newsTask = serviceAgent.GetNewsAsync();
                 var contactsTask = serviceAgent.GetContactsAsync();

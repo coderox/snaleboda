@@ -13,6 +13,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snaleboda.WindowsPhone", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snaleboda.Library", "Snaleboda.Library\Snaleboda.Library.csproj", "{4D11D905-68C6-4A6B-9724-C87AD1DFCF77}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F091D4A9-A788-443E-A584-F43E376E62A2}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Snaleboda\Snaleboda.Shared\Snaleboda.Shared.projitems*{46d322f6-8ba4-484a-ace9-571b362ada43}*SharedItemsImports = 13
