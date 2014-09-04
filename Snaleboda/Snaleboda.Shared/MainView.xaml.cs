@@ -1,27 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+using System.Diagnostics;
 using System.Threading.Tasks;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
+using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
-using Snaleboda.Library;
+using Snaleboda.Library.Services;
+using Snaleboda.Library.Utilities;
 
 namespace Snaleboda
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class MainView : Page
     {
         public MainView()
@@ -35,6 +24,19 @@ namespace Snaleboda
 
             try
             {
+                await LoadAsync();
+                //Load();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void Load()
+        {
+            try
+            {
                 // Production
                 //var serviceAgent = new ServiceAgent();
 
@@ -43,6 +45,41 @@ namespace Snaleboda
 
                 // Faking the service implementation
                 var serviceAgent = new FakeServiceAgent();
+
+                serviceAgent.GetNews(result => Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+                {
+                    if (result != null)
+                    {
+                        newsCollection.Source = result;
+                    }
+                }));
+
+                serviceAgent.GetContacts(result => Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+                {
+                    if (result != null)
+                    {
+                        contactsCollection.Source = result;
+                    }
+                }));
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private async Task LoadAsync()
+        {
+            try
+            {
+                // Production
+                //var serviceAgent = new AsyncServiceAgent();
+
+                // Faking the http stack
+                var serviceAgent = new AsyncServiceAgent(new FakeHttpClientProvider());
+
+                // Faking the service implementation
+                //var serviceAgent = new FakeAsyncServiceAgent();
 
                 var newsTask = serviceAgent.GetNewsAsync();
                 var contactsTask = serviceAgent.GetContactsAsync();
@@ -56,14 +93,13 @@ namespace Snaleboda
 
                 if (contactsTask.Result != null)
                 {
-                    foreach (var contactItem in contactsTask.Result)
-                    {
-
-                    }
+                    contactsCollection.Source = contactsTask.Result;
                 }
-
-            }catch {}
-
+            }
+            catch(Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
         }
     }
 }

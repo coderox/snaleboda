@@ -1,22 +1,14 @@
-﻿using System;
-using System.Collections;
+﻿using Newtonsoft.Json;
+using Snaleboda.Library.Interfaces;
+using Snaleboda.Library.Models;
+using Snaleboda.Library.Utilities;
+using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
-namespace Snaleboda.Library
+namespace Snaleboda.Library.Services
 {
-    public interface IServiceAgent
-    {
-        Task<IList<NewsModel>> GetNewsAsync();
-        Task<IList<ContactModel>> GetContactsAsync();
-        Task PostIncidentAsync(IncidentModel incident);
-    }
-
-    public class ServiceAgent : IServiceAgent
+    public class AsyncServiceAgent : IAsyncServiceAgent
     {
         private readonly IHttpClientProvider _client;
 
@@ -25,16 +17,17 @@ namespace Snaleboda.Library
         const string CONTACTS_URL = BASE_URL + "contacts";
         const string INCIDENTS_URL = BASE_URL + "incidents";
 
-        public ServiceAgent() : this(new HttpClientProvider())
+        public AsyncServiceAgent() : this(new HttpClientProvider())
         {
             
         }
 
-        public ServiceAgent(IHttpClientProvider clientProvider)
+        public AsyncServiceAgent(IHttpClientProvider clientProvider)
         {
             _client = clientProvider;
         }
 
+ 
         public Task<IList<NewsModel>> GetNewsAsync()
         {
             return GetAsync<IList<NewsModel>>(NEWS_URL);
@@ -49,9 +42,9 @@ namespace Snaleboda.Library
         {
             T result;
             try
-            {                
+            {  
                 var uri = new Uri(url, UriKind.Absolute);
-                var content = await _client.GetJsonAsync(uri);
+                var content = await _client.GetJsonAsync(uri).ConfigureAwait(false);
                 
                 result = JsonConvert.DeserializeObject<T>(content);
             }
@@ -69,7 +62,7 @@ namespace Snaleboda.Library
                 var uri = new Uri(INCIDENTS_URL, UriKind.Absolute);
                 var json = JsonConvert.SerializeObject(incident);
                 
-                await _client.PutJsonAsync(uri, json);
+                await _client.PutJsonAsync(uri, json).ConfigureAwait(false);
             }
             catch
             {
@@ -78,31 +71,41 @@ namespace Snaleboda.Library
         }
     }
 
-    public class FakeServiceAgent : IServiceAgent
+    public class FakeAsyncServiceAgent : IAsyncServiceAgent
     {
+        #region Static data
+        private static List<NewsModel> _news  = new List<NewsModel>
+        {
+            new NewsModel {Title = "News Item 1", Content = "Content"},
+            new NewsModel {Title = "News Item 2", Content = "Content"},
+            new NewsModel {Title = "News Item 3", Content = "Content"},
+            new NewsModel {Title = "News Item 4", Content = "Content"},
+            new NewsModel {Title = "News Item 5", Content = "Content"},
+        };
 
+        private static List<ContactModel> _contacts = new List<ContactModel>
+        {
+            new ContactModel { Name = "Johan Lindfors", Email = "johan.lindfors@coderox.se", Phone = "1234567890"},
+        };
+        #endregion
+
+        #region IAsyncServiceAgent
         public async Task<IList<NewsModel>> GetNewsAsync()
         {
-            var news = new List<NewsModel>
-            {
-                new NewsModel {Title = "News Item 1", Content = "Content"},
-                new NewsModel {Title = "News Item 2", Content = "Content"},
-                new NewsModel {Title = "News Item 3", Content = "Content"},
-                new NewsModel {Title = "News Item 4", Content = "Content"},
-                new NewsModel {Title = "News Item 5", Content = "Content"},
-            };
             await Task.Delay(1500);
-            return news;
+            return _news;
         }
 
         public async Task<IList<ContactModel>> GetContactsAsync()
         {
-            return new List<ContactModel>();
+            await Task.Delay(1500); 
+            return _contacts;
         }
 
         public Task PostIncidentAsync(IncidentModel incident)
         {
             throw new NotImplementedException();
         }
+        #endregion
     }
 }

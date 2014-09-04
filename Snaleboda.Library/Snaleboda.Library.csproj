@@ -40,11 +40,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HttpClientProvider.cs" />
-    <Compile Include="ServiceAgent.cs" />
-    <Compile Include="ContactModel.cs" />
-    <Compile Include="IncidentModel.cs" />
-    <Compile Include="NewsModel.cs" />
+    <Compile Include="Utilities\HttpClientProvider.cs" />
+    <Compile Include="Interfaces\IAsyncServiceAgent.cs" />
+    <Compile Include="Interfaces\IServiceAgent.cs" />
+    <Compile Include="Services\AsyncServiceAgent.cs" />
+    <Compile Include="Services\ServiceAgent.cs" />
+    <Compile Include="Models\ContactModel.cs" />
+    <Compile Include="Models\IncidentModel.cs" />
+    <Compile Include="Models\NewsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

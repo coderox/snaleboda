@@ -6,7 +6,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Snaleboda.Library
+namespace Snaleboda.Library.Utilities
 {
     public interface IHttpClientProvider
     {
