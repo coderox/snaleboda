@@ -4,6 +4,7 @@ using Cirrious.CrossCore;
 using Cirrious.CrossCore.Platform;
 using Cirrious.MvvmCross.Droid.Platform;
 using Cirrious.MvvmCross.ViewModels;
+using Snaleboda.Droid.Utilities;
 using Snaleboda.Library.Interfaces;
 using Snaleboda.Library.Utilities;
 
@@ -31,6 +32,7 @@ namespace Snaleboda.Droid
 
             Mvx.RegisterType<HttpMessageHandler,ModernHttpClient.NativeMessageHandler>();            
             Mvx.RegisterType<IHttpClientProvider, HttpClientProvider>();
+            Mvx.RegisterType<IPlatformSpecificsProvider, PlatformSpecificsProvider>();
         }
     }
 }

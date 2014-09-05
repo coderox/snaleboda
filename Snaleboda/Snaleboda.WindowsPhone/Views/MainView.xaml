@@ -56,11 +56,19 @@
                     <Grid>
                         <TextBlock Text="{Binding Status}"/>
 
-                        <ListView x:Name="contactsList"      
+                        <ListView x:Name="contactsList"
                                   ItemsSource="{Binding Source={StaticResource contactsCollection}}">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding Name}"/>
+                                    <Button Command="{Binding CallCommand}">
+                                        <Button.Template>
+                                            <ControlTemplate>
+                                                <Grid>
+                                                    <TextBlock Text="{Binding Name}"/>
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>                                    
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
