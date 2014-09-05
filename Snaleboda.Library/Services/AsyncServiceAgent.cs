@@ -92,13 +92,13 @@ namespace Snaleboda.Library.Services
         #region IAsyncServiceAgent
         public async Task<IList<NewsModel>> GetNewsAsync()
         {
-            await Task.Delay(1500);
+            await Task.Delay(2500);
             return _news;
         }
 
         public async Task<IList<ContactModel>> GetContactsAsync()
         {
-            await Task.Delay(1500); 
+            await Task.Delay(5500); 
             return _contacts;
         }
 

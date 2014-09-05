@@ -1,6 +1,7 @@
 using Android.App;
 using Android.OS;
 using Cirrious.MvvmCross.Droid.Fragging;
+using Snaleboda.Library.ViewModels;
 
 namespace Snaleboda.Droid.Views
 {
@@ -12,12 +13,17 @@ namespace Snaleboda.Droid.Views
         {
         }
 
+        MainViewModel MainViewModel
+        {
+            get { return ViewModel as MainViewModel; }
+        }
+
         protected override void AddTabs(Bundle args)
         {
             
-            AddTab<WelcomeFragment>("Welcome", "Welcome", args, ViewModel);
-            AddTab<NewsFragment>("News", "News", args, ViewModel);
-            AddTab<ContactsFragment>("Contacts", "Contacts", args, ViewModel);
+            AddTab<WelcomeFragment>("Welcome", "Welcome", args, MainViewModel);
+            AddTab<NewsFragment>("News", "News", args, MainViewModel.News);
+            AddTab<ContactsFragment>("Contacts", "Contacts", args, MainViewModel.Contacts);
         }
     }
 }

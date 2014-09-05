@@ -9,8 +9,8 @@
     mc:Ignorable="d">
 
     <views:MvxWindowsPage.Resources>
-        <CollectionViewSource x:Name="newsCollection" Source="{Binding News}" IsSourceGrouped="False"/>
-        <CollectionViewSource x:Name="contactsCollection" Source="{Binding Contacts}" IsSourceGrouped="False"/>
+        <CollectionViewSource x:Name="newsCollection" Source="{Binding News.Items}" IsSourceGrouped="False"/>
+        <CollectionViewSource x:Name="contactsCollection" Source="{Binding Contacts.Items}" IsSourceGrouped="False"/>
     </views:MvxWindowsPage.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -22,9 +22,12 @@
                 </DataTemplate>
             </HubSection>
 
-            <HubSection Header="nyheter">
+            <HubSection Header="nyheter" DataContext="{Binding News}">
                 <DataTemplate>
                     <Grid>
+
+                        <TextBlock Text="{Binding Status}"/>
+
                         <ListView x:Name="newsList"
                                   ItemsSource="{Binding Source={StaticResource newsCollection}}">
                             <ListView.ItemTemplate>
@@ -37,9 +40,22 @@
                 </DataTemplate>
             </HubSection>
 
-            <HubSection Header="kontakter">
+            <HubSection DataContext="{Binding Contacts}">
+                <HubSection.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="kontakter" Margin="0,0,10,0"/>
+                            <Viewbox Height="20">
+                                <ProgressRing IsActive="{Binding IsBusy}" Foreground="White"/>
+                            </Viewbox>                            
+                        </StackPanel>
+                    </DataTemplate>
+                </HubSection.HeaderTemplate>
+                
                 <DataTemplate>
                     <Grid>
+                        <TextBlock Text="{Binding Status}"/>
+
                         <ListView x:Name="contactsList"      
                                   ItemsSource="{Binding Source={StaticResource contactsCollection}}">
                             <ListView.ItemTemplate>

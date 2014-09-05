@@ -18,15 +18,15 @@ namespace Snaleboda.Library.ViewModels
             set { _hello = value; RaisePropertyChanged(() => Hello); }
         }
 
-        public ObservableCollection<NewsModel> News { get; private set; }
-        public ObservableCollection<ContactModel> Contacts { get; private set; }
+        public NewsViewModel News { get; private set; }
+        public ContactsViewModel Contacts { get; private set; }
 
         public MainViewModel(IAsyncServiceAgent service)
         {
             _service = service;
 
-            News = new ObservableCollection<NewsModel>();
-            Contacts = new ObservableCollection<ContactModel>();
+            News = new NewsViewModel(service);
+            Contacts = new ContactsViewModel(service);
         }
 
         public override async void Start()
@@ -35,23 +35,8 @@ namespace Snaleboda.Library.ViewModels
 
             try
             {
-                var news = await _service.GetNewsAsync();
-                if (news == null)
-                    return;
-
-                foreach (var newsModel in news)
-                {
-                    News.Add(newsModel);
-                }
-
-                var contacts = await _service.GetContactsAsync();
-                if (contacts == null)
-                    return;
-
-                foreach (var contact in contacts)
-                {
-                    Contacts.Add(contact);
-                }
+                News.Start();
+                Contacts.Start();
             }
             catch(Exception ex)
             {

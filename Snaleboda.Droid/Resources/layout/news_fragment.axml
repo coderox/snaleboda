@@ -8,5 +8,5 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         local:MvxItemTemplate="@layout/news_item_template"
-        local:MvxBind="ItemsSource News" />
+        local:MvxBind="ItemsSource Items" />
 </LinearLayout>
