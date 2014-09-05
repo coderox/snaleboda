@@ -5,7 +5,7 @@ using Snaleboda.Library.ViewModels;
 
 namespace Snaleboda.Droid.Views
 {
-    [Activity(Label = "Menu", Theme = "@style/Theme.Main")]
+    [Activity(Label = "Menu")]
     public class MainView : MvxTabsFragmentActivity
     {
         public MainView()

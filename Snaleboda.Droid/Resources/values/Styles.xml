@@ -5,7 +5,7 @@
     <item name="android:windowNoTitle">true</item>
   </style>
 
-  <style name="Theme.Main" parent="android:Theme">
+  <style name="AppTheme" parent="android:Theme.Holo">
     <item name="android:windowNoTitle">true</item>
   </style>
 </resources>

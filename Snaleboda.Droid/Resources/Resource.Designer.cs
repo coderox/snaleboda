@@ -158,7 +158,7 @@ namespace Snaleboda.Droid
 		{
 			
 			// aapt resource value: 0x7f060001
-			public const int Theme_Main = 2131099649;
+			public const int AppTheme = 2131099649;
 			
 			// aapt resource value: 0x7f060000
 			public const int Theme_Splash = 2131099648;
