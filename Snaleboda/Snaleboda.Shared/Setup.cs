@@ -5,7 +5,6 @@ using Cirrious.MvvmCross.WindowsCommon.Platform;
 using Windows.UI.Xaml.Controls;
 using Snaleboda.Library.Interfaces;
 using Snaleboda.Library.Utilities;
-using Snaleboda.Utilities;
 
 namespace Snaleboda
 {
@@ -32,7 +31,7 @@ namespace Snaleboda
 
             Mvx.RegisterType<IHttpClientProvider, HttpClientProvider>();
 #if WINDOWS_PHONE_APP
-            Mvx.RegisterType<IPlatformSpecificsProvider,PlatformSpecificsProvider>();
+            Mvx.RegisterType<IPlatformSpecificsProvider,Utilities.PlatformSpecificsProvider>();
 #endif
         }
     }
