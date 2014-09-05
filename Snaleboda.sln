@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F091D4
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snaleboda.Droid", "Snaleboda.Droid\Snaleboda.Droid.csproj", "{A3C64FE0-9858-4D36-AFE1-0B7E1629ED9F}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Snaleboda\Snaleboda.Shared\Snaleboda.Shared.projitems*{46d322f6-8ba4-484a-ace9-571b362ada43}*SharedItemsImports = 13
@@ -91,6 +93,18 @@ Global
 		{4D11D905-68C6-4A6B-9724-C87AD1DFCF77}.Release|ARM.ActiveCfg = Release|Any CPU
 		{4D11D905-68C6-4A6B-9724-C87AD1DFCF77}.Release|x64.ActiveCfg = Release|Any CPU
 		{4D11D905-68C6-4A6B-9724-C87AD1DFCF77}.Release|x86.ActiveCfg = Release|Any CPU
+		{A3C64FE0-9858-4D36-AFE1-0B7E1629ED9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3C64FE0-9858-4D36-AFE1-0B7E1629ED9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3C64FE0-9858-4D36-AFE1-0B7E1629ED9F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A3C64FE0-9858-4D36-AFE1-0B7E1629ED9F}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{A3C64FE0-9858-4D36-AFE1-0B7E1629ED9F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A3C64FE0-9858-4D36-AFE1-0B7E1629ED9F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A3C64FE0-9858-4D36-AFE1-0B7E1629ED9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3C64FE0-9858-4D36-AFE1-0B7E1629ED9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3C64FE0-9858-4D36-AFE1-0B7E1629ED9F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A3C64FE0-9858-4D36-AFE1-0B7E1629ED9F}.Release|ARM.ActiveCfg = Release|Any CPU
+		{A3C64FE0-9858-4D36-AFE1-0B7E1629ED9F}.Release|x64.ActiveCfg = Release|Any CPU
+		{A3C64FE0-9858-4D36-AFE1-0B7E1629ED9F}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -100,5 +114,6 @@ Global
 		{D2326A11-9854-4214-B66C-46D6181D5231} = {6A02737C-ECCA-4C8F-B829-47136C47E896}
 		{052CD24C-60D0-4997-90CE-AD2DC128150D} = {6A02737C-ECCA-4C8F-B829-47136C47E896}
 		{4D11D905-68C6-4A6B-9724-C87AD1DFCF77} = {6A02737C-ECCA-4C8F-B829-47136C47E896}
+		{A3C64FE0-9858-4D36-AFE1-0B7E1629ED9F} = {6A02737C-ECCA-4C8F-B829-47136C47E896}
 	EndGlobalSection
 EndGlobal

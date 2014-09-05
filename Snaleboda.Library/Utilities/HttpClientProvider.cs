@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Snaleboda.Library.Interfaces;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -8,27 +10,36 @@ using System.Threading.Tasks;
 
 namespace Snaleboda.Library.Utilities
 {
-    public interface IHttpClientProvider
-    {
-        Task<string> GetJsonAsync(Uri uri);
-        Task PutJsonAsync(Uri uri, string json);
-    }
-
     public class HttpClientProvider : IHttpClientProvider
     {
-        public Task<string> GetJsonAsync(Uri uri)
+        private HttpClient _client;
+
+        public HttpClientProvider(HttpMessageHandler messageHandler)
         {
-            var client = new HttpClient();
-            return client.GetStringAsync(uri);
+            _client = messageHandler != null ? 
+                new HttpClient(messageHandler) : 
+                new HttpClient();
+        }
+
+        public async Task<string> GetJsonAsync(Uri uri)
+        {
+            try
+            {
+                return await _client.GetStringAsync(uri);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                return string.Empty;
+            }
         }
 
         public Task PutJsonAsync(Uri uri, string json)
         {
-            var client = new HttpClient();            
             var content = new StringContent(json);
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
             content.Headers.Add("X-ZUMO-APPLICATION", APPLICATION_KEY);
-            return client.PutAsync(uri, content);
+            return _client.PutAsync(uri, content);
         }
 
         #region SECRET STUFF HERE, NEVER TRUST THE AUDIENCE

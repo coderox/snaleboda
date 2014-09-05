@@ -21,7 +21,7 @@ namespace Snaleboda.Library.Services
         const string CONTACTS_URL = BASE_URL + "contacts";
         const string INCIDENTS_URL = BASE_URL + "incidents";
 
-        public ServiceAgent() : this(new HttpClientProvider())
+        public ServiceAgent() : this(new HttpClientProvider(null))
         {
             
         }

@@ -17,10 +17,10 @@ namespace Snaleboda.Library.Services
         const string CONTACTS_URL = BASE_URL + "contacts";
         const string INCIDENTS_URL = BASE_URL + "incidents";
 
-        public AsyncServiceAgent() : this(new HttpClientProvider())
-        {
+        //public AsyncServiceAgent() : this(new HttpClientProvider())
+        //{
             
-        }
+        //}
 
         public AsyncServiceAgent(IHttpClientProvider clientProvider)
         {
@@ -71,7 +71,7 @@ namespace Snaleboda.Library.Services
         }
     }
 
-    public class FakeAsyncServiceAgent : IAsyncServiceAgent
+    public class AsyncServiceAgentFake : IAsyncServiceAgent
     {
         #region Static data
         private static List<NewsModel> _news  = new List<NewsModel>

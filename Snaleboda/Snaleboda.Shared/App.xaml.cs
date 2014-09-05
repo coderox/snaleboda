@@ -17,6 +17,8 @@ using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
+using Cirrious.CrossCore;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace Snaleboda
 {
@@ -92,13 +94,11 @@ namespace Snaleboda
                 rootFrame.Navigated += this.RootFrame_FirstNavigated;
 #endif
 
-                // When the navigation stack isn't restored navigate to the first page,
-                // configuring the new page by passing required information as a navigation
-                // parameter
-                if (!rootFrame.Navigate(typeof(MainView), e.Arguments))
-                {
-                    throw new Exception("Failed to create initial page");
-                }
+                var setup = new Setup(rootFrame);
+                setup.Initialize();
+
+                var start = Mvx.Resolve<IMvxAppStart>();
+                start.Start();
             }
 
             // Ensure the current window is active
