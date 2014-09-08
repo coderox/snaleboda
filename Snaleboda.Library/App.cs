@@ -1,4 +1,7 @@
-﻿using Cirrious.CrossCore.IoC;
+﻿using Cirrious.CrossCore;
+using Cirrious.CrossCore.IoC;
+using Snaleboda.Library.Interfaces;
+using Snaleboda.Library.Utilities;
 
 namespace Snaleboda.Library
 {
@@ -7,10 +10,10 @@ namespace Snaleboda.Library
         public override void Initialize()
         {
             CreatableTypes()
-                .EndingWith("Fake")
+                .EndingWith("Agent")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
-				
+
             RegisterAppStart<ViewModels.MainViewModel>();
         }
     }

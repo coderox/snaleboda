@@ -28,6 +28,10 @@ namespace Snaleboda.Library.ViewModels
 
         public string Name { get { return _model.Name; } }
 
+        public string Phone { get { return _model.Phone; } }
+
+        public string Email { get { return _model.Email; } }
+
         public ContactViewModel(ContactModel model)
         {
             _model = model;
