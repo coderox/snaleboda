@@ -85,8 +85,11 @@ namespace Snaleboda.Droid
 			// aapt resource value: 0x7f050000
 			public const int MvxBindingTagUnique = 2131034112;
 			
+			// aapt resource value: 0x01010001
+			public const int actualtabcontent = 16842753;
+			
 			// aapt resource value: 0x01010000
-			public const int actualtabcontent = 16842752;
+			public const int progressBar = 16842752;
 			
 			static Id()
 			{

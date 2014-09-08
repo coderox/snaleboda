@@ -4,6 +4,10 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
+    <ProgressBar
+        android:id="@+android:id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <Mvx.MvxListView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
