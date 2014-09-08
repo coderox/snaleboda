@@ -60,6 +60,22 @@ namespace Snaleboda.Droid
 			}
 		}
 		
+		public partial class Color
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int OrangeBackground = 2131034112;
+			
+			static Color()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Color()
+			{
+			}
+		}
+		
 		public partial class Drawable
 		{
 			
@@ -82,8 +98,8 @@ namespace Snaleboda.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int MvxBindingTagUnique = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int MvxBindingTagUnique = 2131099648;
 			
 			// aapt resource value: 0x01010001
 			public const int actualtabcontent = 16842753;
@@ -160,11 +176,14 @@ namespace Snaleboda.Droid
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f060001
-			public const int AppTheme = 2131099649;
+			// aapt resource value: 0x7f070001
+			public const int AppTheme = 2131165185;
 			
-			// aapt resource value: 0x7f060000
-			public const int Theme_Splash = 2131099648;
+			// aapt resource value: 0x7f070002
+			public const int LightTabWidget = 2131165186;
+			
+			// aapt resource value: 0x7f070000
+			public const int Theme_Splash = 2131165184;
 			
 			static Style()
 			{

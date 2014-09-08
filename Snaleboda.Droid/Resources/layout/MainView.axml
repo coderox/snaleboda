@@ -22,7 +22,8 @@
                 android:id="@android:id/tabcontent"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_weight="0" />
+                android:layout_weight="0"
+                android:textColor="#000000" />
             <FrameLayout
                 android:id="@+android:id/actualtabcontent"
                 android:layout_width="fill_parent"

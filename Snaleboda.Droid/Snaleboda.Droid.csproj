@@ -140,6 +140,7 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\welcome_fragment.axml" />
+    <AndroidResource Include="Resources\values\Colors.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Snaleboda.Library\Snaleboda.Library.csproj">

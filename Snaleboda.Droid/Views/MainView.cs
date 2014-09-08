@@ -11,6 +11,7 @@ namespace Snaleboda.Droid.Views
         public MainView()
             : base(Resource.Layout.MainView, Resource.Id.actualtabcontent)
         {
+           
         }
 
         MainViewModel MainViewModel
@@ -19,8 +20,7 @@ namespace Snaleboda.Droid.Views
         }
 
         protected override void AddTabs(Bundle args)
-        {
-            
+        {            
             AddTab<WelcomeFragment>("Welcome", "Welcome", args, MainViewModel);
             AddTab<NewsFragment>("News", "News", args, MainViewModel.News);
             AddTab<ContactsFragment>("Contacts", "Contacts", args, MainViewModel.Contacts);
