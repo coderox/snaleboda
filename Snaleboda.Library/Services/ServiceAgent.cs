@@ -1,30 +1,20 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using Snaleboda.Library.Interfaces;
 using Snaleboda.Library.Models;
-using Snaleboda.Library.Utilities;
 
 namespace Snaleboda.Library.Services
 {
     public class ServiceAgent : IServiceAgent
     {
         private readonly IHttpClientProvider _client;
+        private readonly ISerializer _serializer;
 
         const string BASE_URL = "https://snaleboda.azure-mobile.net/tables/";
         const string NEWS_URL = BASE_URL + "news";
         const string CONTACTS_URL = BASE_URL + "contacts";
         const string INCIDENTS_URL = BASE_URL + "incidents";
-
-        public ServiceAgent() : this(new HttpClientProvider(null))
-        {
-            
-        }
 
         public ServiceAgent(IHttpClientProvider clientProvider)
         {

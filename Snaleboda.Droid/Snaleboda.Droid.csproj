@@ -107,6 +107,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
+    <Compile Include="Utilities\HttpClientProvider.cs" />
     <Compile Include="Utilities\PlatformSpecificsProvider.cs" />
     <Compile Include="Views\Fragments.cs" />
     <Compile Include="Views\MainView.cs" />
@@ -143,9 +144,9 @@
     <AndroidResource Include="Resources\values\Colors.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Snaleboda.Library.ViewModels\Snaleboda.Library.ViewModels.csproj">
+    <ProjectReference Include="..\Snaleboda.Library.ViewModels\Snaleboda.Core.csproj">
       <Project>{870fe91e-bccf-4258-8d44-92e46f921358}</Project>
-      <Name>Snaleboda.Library.ViewModels</Name>
+      <Name>Snaleboda.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\Snaleboda.Library\Snaleboda.Library.csproj">
       <Project>{4d11d905-68c6-4a6b-9724-c87ad1dfcf77}</Project>

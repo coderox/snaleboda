@@ -83,9 +83,9 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <ProjectReference Include="..\..\Snaleboda.Library.ViewModels\Snaleboda.Library.ViewModels.csproj">
+    <ProjectReference Include="..\..\Snaleboda.Library.ViewModels\Snaleboda.Core.csproj">
       <Project>{870fe91e-bccf-4258-8d44-92e46f921358}</Project>
-      <Name>Snaleboda.Library.ViewModels</Name>
+      <Name>Snaleboda.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Snaleboda.Library\Snaleboda.Library.csproj">
       <Project>{4d11d905-68c6-4a6b-9724-c87ad1dfcf77}</Project>
@@ -130,6 +130,10 @@
     </Reference>
     <Reference Include="Cirrious.MvvmCross.WindowsCommon">
       <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.1-beta3\lib\wpa81\Cirrious.MvvmCross.WindowsCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.5\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

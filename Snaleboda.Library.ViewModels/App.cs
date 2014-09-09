@@ -1,7 +1,6 @@
-using Cirrious.CrossCore;
+using System;
+using System.Reflection;
 using Cirrious.CrossCore.IoC;
-using Snaleboda.Library.Interfaces;
-using Snaleboda.Library.Utilities;
 using Snaleboda.Library.Services;
 
 namespace Snaleboda.Library
@@ -10,12 +9,12 @@ namespace Snaleboda.Library
     {
         public override void Initialize()
         {
-            CreatableTypes()
+            typeof(AsyncServiceAgent).GetTypeInfo().Assembly.CreatableTypes()
                 .EndingWith("Agent")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            Mvx.RegisterType<IAsyncServiceAgent, AsyncServiceAgent>();
+            //Mvx.RegisterType<IAsyncServiceAgent, AsyncServiceAgent>();
             RegisterAppStart<ViewModels.MainViewModel>();
         }
     }

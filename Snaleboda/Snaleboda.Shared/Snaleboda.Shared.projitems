@@ -17,6 +17,8 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)DebugTrace.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Setup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\HttpClientProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\JsonSerializer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\MainView.xaml.cs" />
   </ItemGroup>
 </Project>

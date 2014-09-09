@@ -1,7 +1,5 @@
-﻿using Newtonsoft.Json;
-using Snaleboda.Library.Interfaces;
+﻿using Snaleboda.Library.Interfaces;
 using Snaleboda.Library.Models;
-using Snaleboda.Library.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -11,20 +9,17 @@ namespace Snaleboda.Library.Services
     public class AsyncServiceAgent : IAsyncServiceAgent
     {
         private readonly IHttpClientProvider _client;
+        private readonly ISerializer _serializer;
 
         const string BASE_URL = "https://snaleboda.azure-mobile.net/tables/";
         const string NEWS_URL = BASE_URL + "news";
         const string CONTACTS_URL = BASE_URL + "contacts";
         const string INCIDENTS_URL = BASE_URL + "incidents";
 
-        //public AsyncServiceAgent() : this(new HttpClientProvider())
-        //{
-            
-        //}
-
-        public AsyncServiceAgent(IHttpClientProvider clientProvider)
+        public AsyncServiceAgent(IHttpClientProvider clientProvider, ISerializer serializer)
         {
             _client = clientProvider;
+            _serializer = serializer;
         }
 
  
@@ -45,8 +40,8 @@ namespace Snaleboda.Library.Services
             {  
                 var uri = new Uri(url, UriKind.Absolute);
                 var content = await _client.GetJsonAsync(uri).ConfigureAwait(false);
-                
-                result = JsonConvert.DeserializeObject<T>(content);
+
+                result = _serializer.Deserialize<T>(content);
             }
             catch (Exception ex)
             {
@@ -60,7 +55,7 @@ namespace Snaleboda.Library.Services
             try
             {                
                 var uri = new Uri(INCIDENTS_URL, UriKind.Absolute);
-                var json = JsonConvert.SerializeObject(incident);
+                var json = _serializer.Serialize(incident);
                 
                 await _client.PutJsonAsync(uri, json).ConfigureAwait(false);
             }

@@ -6,7 +6,6 @@ using Cirrious.MvvmCross.Droid.Platform;
 using Cirrious.MvvmCross.ViewModels;
 using Snaleboda.Droid.Utilities;
 using Snaleboda.Library.Interfaces;
-using Snaleboda.Library.Utilities;
 
 namespace Snaleboda.Droid
 {

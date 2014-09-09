@@ -34,7 +34,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snaleboda.XamarinForms.Andr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snaleboda.XamarinForms.WinPhone", "Snaleboda.XamarinForms\Snaleboda.XamarinForms.WinPhone\Snaleboda.XamarinForms.WinPhone.csproj", "{DE7BB516-4144-48CB-8A46-CAF1DAB86372}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snaleboda.Library.ViewModels", "Snaleboda.Library.ViewModels\Snaleboda.Library.ViewModels.csproj", "{870FE91E-BCCF-4258-8D44-92E46F921358}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snaleboda.Core", "Snaleboda.Library.ViewModels\Snaleboda.Core.csproj", "{870FE91E-BCCF-4258-8D44-92E46F921358}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

@@ -4,8 +4,8 @@ using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.WindowsCommon.Platform;
 using Windows.UI.Xaml.Controls;
 using Snaleboda.Library.Interfaces;
-using Snaleboda.Library.Utilities;
 using System.Net.Http;
+using Snaleboda.Utilities;
 
 namespace Snaleboda
 {
@@ -32,6 +32,7 @@ namespace Snaleboda
 
             Mvx.RegisterType<HttpMessageHandler, HttpClientHandler>();
             Mvx.RegisterType<IHttpClientProvider, HttpClientProvider>();
+            Mvx.RegisterType<ISerializer,JsonSerializer>();
 #if WINDOWS_PHONE_APP
             Mvx.RegisterType<IPlatformSpecificsProvider,Utilities.PlatformSpecificsProvider>();
 #endif
