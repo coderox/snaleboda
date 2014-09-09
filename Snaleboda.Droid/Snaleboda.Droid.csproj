@@ -143,6 +143,10 @@
     <AndroidResource Include="Resources\values\Colors.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Snaleboda.Library.ViewModels\Snaleboda.Library.ViewModels.csproj">
+      <Project>{870fe91e-bccf-4258-8d44-92e46f921358}</Project>
+      <Name>Snaleboda.Library.ViewModels</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Snaleboda.Library\Snaleboda.Library.csproj">
       <Project>{4d11d905-68c6-4a6b-9724-c87ad1dfcf77}</Project>
       <Name>Snaleboda.Library</Name>
