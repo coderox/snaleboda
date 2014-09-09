@@ -27,6 +27,8 @@ namespace Snaleboda.XamarinForms.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Bootstrapper.Init();
+
             Forms.Init();
 
             window = new UIWindow(UIScreen.MainScreen.Bounds);
