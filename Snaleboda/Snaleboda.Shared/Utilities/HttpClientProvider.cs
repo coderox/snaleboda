@@ -1,13 +1,12 @@
 ﻿using Snaleboda.Library.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
-using System.Text;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-namespace Snaleboda.Library.Utilities
+namespace Snaleboda.Utilities
 {
     public class HttpClientProvider : IHttpClientProvider
     {

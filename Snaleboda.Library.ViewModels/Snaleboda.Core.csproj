@@ -5,11 +5,11 @@
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4D11D905-68C6-4A6B-9724-C87AD1DFCF77}</ProjectGuid>
+    <ProjectGuid>{870FE91E-BCCF-4258-8D44-92E46F921358}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Snaleboda.Library</RootNamespace>
-    <AssemblyName>Snaleboda.Library</AssemblyName>
+    <RootNamespace>Snaleboda.Library.ViewModels</RootNamespace>
+    <AssemblyName>Snaleboda.Library.ViewModels</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -36,19 +36,35 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IHttpClientProvider.cs" />
-    <Compile Include="Interfaces\IPlatformSpecificsProvider.cs" />
-    <Compile Include="Interfaces\IAsyncServiceAgent.cs" />
-    <Compile Include="Interfaces\ISerializer.cs" />
-    <Compile Include="Interfaces\IServiceAgent.cs" />
-    <Compile Include="Services\AsyncServiceAgent.cs" />
-    <Compile Include="Services\ServiceAgent.cs" />
-    <Compile Include="Models\ContactModel.cs" />
-    <Compile Include="Models\IncidentModel.cs" />
-    <Compile Include="Models\NewsModel.cs" />
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <ProjectReference Include="..\Snaleboda.Library\Snaleboda.Library.csproj">
+      <Project>{4d11d905-68c6-4a6b-9724-c87ad1dfcf77}</Project>
+      <Name>Snaleboda.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="CollectionViewModelBase.cs" />
+    <Compile Include="ContactsViewModel.cs" />
+    <Compile Include="ContactViewModel.cs" />
+    <Compile Include="MainViewModel.cs" />
+    <Compile Include="NewsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.1-beta3\lib\portable-win+net45+wp8+win8+wpa81+MonoTouch+MonoAndroid\Cirrious.CrossCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.1-beta3\lib\portable-win+net45+wp8+win8+wpa81+MonoTouch+MonoAndroid\Cirrious.MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.1-beta3\lib\portable-win+net45+wp8+win8+wpa81+MonoTouch+MonoAndroid\Cirrious.MvvmCross.Localization.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snaleboda.XamarinForms.Andr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snaleboda.XamarinForms.WinPhone", "Snaleboda.XamarinForms\Snaleboda.XamarinForms.WinPhone\Snaleboda.XamarinForms.WinPhone.csproj", "{DE7BB516-4144-48CB-8A46-CAF1DAB86372}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snaleboda.Core", "Snaleboda.Library.ViewModels\Snaleboda.Core.csproj", "{870FE91E-BCCF-4258-8D44-92E46F921358}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Snaleboda\Snaleboda.Shared\Snaleboda.Shared.projitems*{46d322f6-8ba4-484a-ace9-571b362ada43}*SharedItemsImports = 13
@@ -512,6 +514,42 @@ Global
 		{DE7BB516-4144-48CB-8A46-CAF1DAB86372}.Release|x86.ActiveCfg = Release|x86
 		{DE7BB516-4144-48CB-8A46-CAF1DAB86372}.Release|x86.Build.0 = Release|x86
 		{DE7BB516-4144-48CB-8A46-CAF1DAB86372}.Release|x86.Deploy.0 = Release|x86
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Ad-Hoc|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Ad-Hoc|Mixed Platforms.Build.0 = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Ad-Hoc|x64.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Ad-Hoc|x86.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.AppStore|ARM.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.AppStore|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.AppStore|Mixed Platforms.Build.0 = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.AppStore|x64.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Release|ARM.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Release|x64.ActiveCfg = Release|Any CPU
+		{870FE91E-BCCF-4258-8D44-92E46F921358}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -528,5 +566,6 @@ Global
 		{B9D0C9D6-1E9C-47FF-B967-AFB828987E9F} = {956FCE55-53C1-46CD-B56C-DC3965E39668}
 		{7F0A95FB-E90C-44CB-A51D-53929CEFA100} = {956FCE55-53C1-46CD-B56C-DC3965E39668}
 		{DE7BB516-4144-48CB-8A46-CAF1DAB86372} = {956FCE55-53C1-46CD-B56C-DC3965E39668}
+		{870FE91E-BCCF-4258-8D44-92E46F921358} = {6A02737C-ECCA-4C8F-B829-47136C47E896}
 	EndGlobalSection
 EndGlobal
