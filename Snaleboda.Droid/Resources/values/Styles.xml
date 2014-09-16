@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="Theme.Splash" parent="android:Theme">
+    <item name="android:windowBackground">@drawable/splash</item>
+    <item name="android:windowNoTitle">true</item>
+  </style>
+
+  <style name="AppTheme" parent="android:Theme.Holo">
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:background">#FFE699</item>
+    <item name="android:tabWidgetStyle">@style/LightTabWidget</item>
+  </style>
+
+  <style name="LightTabWidget" parent="@android:style/Widget.TabWidget">
+    <!-- set textColor to red, so you can verify that it applied. -->
+    <item name="android:textColor">#f00</item>
+  </style>
+</resources>

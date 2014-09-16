@@ -15,14 +15,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)MainView.xaml.cs">
-      <DependentUpon>MainView.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="$(MSBuildThisFileDirectory)MainView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Compile Include="$(MSBuildThisFileDirectory)DebugTrace.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Setup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\HttpClientProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\JsonSerializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MainView.xaml.cs" />
   </ItemGroup>
 </Project>
