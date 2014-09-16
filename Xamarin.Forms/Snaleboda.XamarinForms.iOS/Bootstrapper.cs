@@ -22,16 +22,17 @@ namespace Snaleboda.XamarinForms.iOS
            
             builder.RegisterType<MainViewModel>();
             builder.RegisterType<NewsViewModel>();
+            builder.RegisterType<ContactsViewModel>();
+            builder.RegisterType<IncidentViewModel>();
 
             builder.RegisterType<NewsView>();
             builder.RegisterType<MainView>();
-            builder.RegisterType<NewsView>();
             builder.RegisterType<ContactsView>();
+            builder.RegisterType<IncidentView>();
 
             var container = builder.Build();
 
             Resolver.SetResolver(new AutofacResolver(container));
-
         }
     }
 }
