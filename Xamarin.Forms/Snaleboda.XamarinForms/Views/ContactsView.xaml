@@ -3,4 +3,20 @@
 					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 					   x:Class="Snaleboda.XamarinForms.Views.ContactsView" Title="Kontakter" Icon="contacts.png">
 
+  <ListView ItemsSource="{Binding Contacts}" RowHeight="80">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <ViewCell.View>
+            <StackLayout Orientation="Vertical" Spacing="0" Padding="10">
+              <Label Font="Bold,20" Text="{Binding Name}" />
+              <Label Font="16" Text="{Binding Phone}" />
+              <Label Font="16" Text="{Binding Email}" />
+            </StackLayout>
+          </ViewCell.View>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+  
 </ContentPage>

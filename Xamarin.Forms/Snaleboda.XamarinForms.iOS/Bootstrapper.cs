@@ -1,14 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-using Xamarin.Forms.Labs.Services;
+using Autofac;
+using Snaleboda.Library.Interfaces;
+using Snaleboda.Library.Services;
+using Snaleboda.XamarinForms.Networking;
+using Snaleboda.XamarinForms.Utilities;
 using Snaleboda.XamarinForms.ViewModels;
 using Snaleboda.XamarinForms.Views;
-using Autofac;
+using System.Net.Http;
+
+using Xamarin.Forms.Labs.Services;
 using Xamarin.Forms.Labs.Services.Autofac;
 
 
@@ -29,6 +28,11 @@ namespace Snaleboda.XamarinForms.iOS
             builder.RegisterType<MainView>();
             builder.RegisterType<ContactsView>();
             builder.RegisterType<IncidentView>();
+
+            builder.RegisterType<AsyncServiceAgent>().As<IAsyncServiceAgent>();
+            builder.RegisterType<HttpClientProvider>().As<IHttpClientProvider>();
+            builder.RegisterType<HttpClientHandler>().As<HttpMessageHandler>();
+            builder.RegisterType<JsonSerializer>().As<ISerializer>();
 
             var container = builder.Build();
 
