@@ -97,6 +97,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\contacts.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Autofac">
@@ -143,6 +144,12 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.1.1.1.6206\lib\MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\news.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\report.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
