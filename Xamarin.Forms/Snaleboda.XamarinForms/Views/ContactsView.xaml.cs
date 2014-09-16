@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Snaleboda.XamarinForms.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,11 @@ namespace Snaleboda.XamarinForms.Views
 {
     public partial class ContactsView
     {
-        public ContactsView()
+        public ContactsView(ContactsViewModel model)
         {
             InitializeComponent();
+
+            BindingContext = model;
         }
     }
 }
