@@ -12,6 +12,8 @@ namespace Snaleboda.XamarinForms.Views
         public NewsView(NewsViewModel viewModel)
         {
             InitializeComponent();
+
+            BindingContext = viewModel;
         }
     }
 }
