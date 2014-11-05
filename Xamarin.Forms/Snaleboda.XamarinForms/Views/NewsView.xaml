@@ -4,7 +4,7 @@
 					   x:Class="Snaleboda.XamarinForms.Views.NewsView"         
              Title="Nyheter" Icon="news.png" >
 
-  <ListView ItemsSource="{Binding News}" BackgroundColor="#FFE699" HasUnevenRows="true" RowHeight="60">
+  <ListView ItemsSource="{Binding News}" BackgroundColor="#FFE699" RowHeight="60">
     <ListView.ItemTemplate>
       <DataTemplate>
         <ViewCell >
