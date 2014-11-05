@@ -3,4 +3,16 @@
 					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 					   x:Class="Snaleboda.XamarinForms.Views.IncidentView" Title="Rapportera" Icon="report.png">
 
+    <StackLayout HorizontalOptions="Fill" Padding="20" BackgroundColor="#FFE699">
+      <StackLayout>
+        <Button Text="Ladda upp bild"></Button>
+        <Button Text="Ta bild bild"></Button>
+      </StackLayout>
+  
+      <Image Aspect="AspectFill"></Image>
+      <Label Text="Namn" />
+      <Entry></Entry>
+      <Label Text="Beskrivning" />
+      <Entry></Entry>
+    </StackLayout>
 </ContentPage>
