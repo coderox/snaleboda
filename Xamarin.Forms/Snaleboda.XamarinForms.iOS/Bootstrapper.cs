@@ -6,7 +6,7 @@ using Snaleboda.XamarinForms.Utilities;
 using Snaleboda.XamarinForms.ViewModels;
 using Snaleboda.XamarinForms.Views;
 using System.Net.Http;
-
+using Xamarin.Forms.Labs;
 using Xamarin.Forms.Labs.Services;
 using Xamarin.Forms.Labs.Services.Autofac;
 
@@ -33,6 +33,8 @@ namespace Snaleboda.XamarinForms.iOS
             builder.RegisterType<HttpClientProvider>().As<IHttpClientProvider>();
             builder.RegisterType<HttpClientHandler>().As<HttpMessageHandler>();
             builder.RegisterType<JsonSerializer>().As<ISerializer>();
+
+            builder.RegisterInstance<IDevice>(AppleDevice.CurrentDevice);
 
             var container = builder.Build();
 

@@ -4,15 +4,16 @@
 					   x:Class="Snaleboda.XamarinForms.Views.IncidentView" Title="Rapportera" Icon="report.png">
 
     <StackLayout HorizontalOptions="Fill" Padding="20" BackgroundColor="#FFE699">
-      <StackLayout>
-        <Button Text="Ladda upp bild"></Button>
-        <Button Text="Ta bild bild"></Button>
+      <StackLayout IsVisible="{Binding ShowButtons}">
+        <Button Command="{Binding SelectPhoto}" Text="Ladda upp bild"></Button>
+        <Button Command="{Binding TakePhoto}" Text="Ta bild bild"></Button>
       </StackLayout>
   
-      <Image Aspect="AspectFill"></Image>
+      <Image HeightRequest="100"  IsVisible="{Binding ShowPhoto}" Source="{Binding Photo}" Aspect="AspectFill"></Image>
       <Label Text="Namn" />
       <Entry></Entry>
       <Label Text="Beskrivning" />
       <Entry></Entry>
+      <Button Text="Skicka" />
     </StackLayout>
 </ContentPage>
