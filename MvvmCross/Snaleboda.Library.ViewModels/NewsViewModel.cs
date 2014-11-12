@@ -9,7 +9,7 @@ using Snaleboda.Library.Interfaces;
 using Snaleboda.Library.Models;
 using System.Collections.ObjectModel;
 
-namespace Snaleboda.Library.ViewModels
+namespace Snaleboda.Core.ViewModels
 {
     public class NewsViewModel : MvxViewModel
     {

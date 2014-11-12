@@ -5,7 +5,7 @@ using System.Diagnostics;
 using Cirrious.MvvmCross.ViewModels;
 using Snaleboda.Library.Interfaces;
 
-namespace Snaleboda.Library.ViewModels
+namespace Snaleboda.Core.ViewModels
 {
     public abstract class CollectionViewModelBase<T> : MvxViewModel
     {

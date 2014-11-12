@@ -3,7 +3,7 @@ using System.Reflection;
 using Cirrious.CrossCore.IoC;
 using Snaleboda.Library.Services;
 
-namespace Snaleboda.Library
+namespace Snaleboda.Core
 {
     public class App : Cirrious.MvvmCross.ViewModels.MvxApplication
     {

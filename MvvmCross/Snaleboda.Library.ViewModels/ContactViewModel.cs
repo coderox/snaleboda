@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using Snaleboda.Library.Interfaces;
 using Snaleboda.Library.Models;
 
-namespace Snaleboda.Library.ViewModels
+namespace Snaleboda.Core.ViewModels
 {
     public class ContactViewModel : MvxViewModel
     {
