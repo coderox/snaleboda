@@ -4,14 +4,14 @@
 					   x:Class="Snaleboda.XamarinForms.Views.NewsView"         
              Title="Nyheter" Icon="news.png" >
 
-  <ListView ItemsSource="{Binding News}" BackgroundColor="#FFE699" HasUnevenRows="true">
+  <ListView ItemsSource="{Binding News}" BackgroundColor="#FFE699" RowHeight="60">
     <ListView.ItemTemplate>
       <DataTemplate>
         <ViewCell >
           <ViewCell.View>
-            <StackLayout BackgroundColor="#FFE699" Spacing="0" Padding="20">
+            <StackLayout BackgroundColor="#FFE699" Spacing="0" Padding="10">
               <Label Text="{Binding Title}"  Font="Medium" />
-              <Label Text="{Binding Content}"  Font="Small" />
+              <Label Text="{Binding Content}" LineBreakMode="TailTruncation" Font="Small" />
             </StackLayout>
           </ViewCell.View>
         </ViewCell>
