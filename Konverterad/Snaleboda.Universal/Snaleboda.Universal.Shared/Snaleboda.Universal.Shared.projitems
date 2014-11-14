@@ -22,6 +22,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SampleData\MainPageVmSampleData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IncidentVmi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ContactVmi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\NewsVmi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainPageVm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\VmBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="$(MSBuildThisFileDirectory)MainPage.xaml">

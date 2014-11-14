@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snaleboda.Universal.Windows
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snaleboda.Universal.WindowsPhone", "Snaleboda.Universal\Snaleboda.Universal.WindowsPhone\Snaleboda.Universal.WindowsPhone.csproj", "{497DE7A9-38B3-475A-B9A8-4069073E789F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snaleboda.Xamarin.Core", "Snaleboda.Xamarin.Core\Snaleboda.Xamarin.Core.csproj", "{D535DED9-62D4-4026-9283-AF3CBDADAB4E}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Snaleboda.Universal\Snaleboda.Universal.Shared\Snaleboda.Universal.Shared.projitems*{9a42748e-e411-486b-9046-c5a960cdb044}*SharedItemsImports = 4
@@ -59,6 +61,8 @@ Global
 		{497DE7A9-38B3-475A-B9A8-4069073E789F}.Debug|ARM.Build.0 = Debug|ARM
 		{497DE7A9-38B3-475A-B9A8-4069073E789F}.Debug|ARM.Deploy.0 = Debug|ARM
 		{497DE7A9-38B3-475A-B9A8-4069073E789F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{497DE7A9-38B3-475A-B9A8-4069073E789F}.Debug|x64.Build.0 = Debug|x86
+		{497DE7A9-38B3-475A-B9A8-4069073E789F}.Debug|x64.Deploy.0 = Debug|x86
 		{497DE7A9-38B3-475A-B9A8-4069073E789F}.Debug|x86.ActiveCfg = Debug|x86
 		{497DE7A9-38B3-475A-B9A8-4069073E789F}.Debug|x86.Build.0 = Debug|x86
 		{497DE7A9-38B3-475A-B9A8-4069073E789F}.Debug|x86.Deploy.0 = Debug|x86
@@ -69,9 +73,21 @@ Global
 		{497DE7A9-38B3-475A-B9A8-4069073E789F}.Release|ARM.Build.0 = Release|ARM
 		{497DE7A9-38B3-475A-B9A8-4069073E789F}.Release|ARM.Deploy.0 = Release|ARM
 		{497DE7A9-38B3-475A-B9A8-4069073E789F}.Release|x64.ActiveCfg = Release|Any CPU
+		{497DE7A9-38B3-475A-B9A8-4069073E789F}.Release|x64.Build.0 = Release|x86
+		{497DE7A9-38B3-475A-B9A8-4069073E789F}.Release|x64.Deploy.0 = Release|x86
 		{497DE7A9-38B3-475A-B9A8-4069073E789F}.Release|x86.ActiveCfg = Release|x86
 		{497DE7A9-38B3-475A-B9A8-4069073E789F}.Release|x86.Build.0 = Release|x86
 		{497DE7A9-38B3-475A-B9A8-4069073E789F}.Release|x86.Deploy.0 = Release|x86
+		{D535DED9-62D4-4026-9283-AF3CBDADAB4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D535DED9-62D4-4026-9283-AF3CBDADAB4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D535DED9-62D4-4026-9283-AF3CBDADAB4E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{D535DED9-62D4-4026-9283-AF3CBDADAB4E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D535DED9-62D4-4026-9283-AF3CBDADAB4E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D535DED9-62D4-4026-9283-AF3CBDADAB4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D535DED9-62D4-4026-9283-AF3CBDADAB4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D535DED9-62D4-4026-9283-AF3CBDADAB4E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{D535DED9-62D4-4026-9283-AF3CBDADAB4E}.Release|x64.ActiveCfg = Release|Any CPU
+		{D535DED9-62D4-4026-9283-AF3CBDADAB4E}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
