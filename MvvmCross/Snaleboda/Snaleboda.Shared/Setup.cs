@@ -18,7 +18,7 @@ namespace Snaleboda
 
         protected override IMvxApplication CreateApp()
         {
-            return new Library.App();
+            return new Core.App();
         }
 		
         protected override IMvxTrace CreateDebugTrace()
