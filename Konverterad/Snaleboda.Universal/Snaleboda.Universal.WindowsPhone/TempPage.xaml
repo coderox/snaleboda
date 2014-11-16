@@ -9,7 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-    	<ListView Style="{StaticResource AppListViewStyle}"/>
+    	<ListView Style="{StaticResource AppListViewStyle}">
+    		<TextBlock TextWrapping="Wrap" Text="TextBlock" Style="{StaticResource CaptionTextBlockStyle}"/>
+    	</ListView>
 
     </Grid>
 </Page>

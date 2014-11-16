@@ -44,5 +44,8 @@
 		<Setter Property="SelectionMode" Value="None"/>
 		<Setter Property="IsItemClickEnabled" Value="True"/>
 	</Style>
+	<Style x:Key="CaptionTextBlockStyle" TargetType="TextBlock">
+		<Setter Property="Foreground" Value="#FF4A4A4A"/>
+	</Style>
     
 </ResourceDictionary>
