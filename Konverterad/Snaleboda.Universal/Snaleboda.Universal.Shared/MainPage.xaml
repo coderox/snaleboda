@@ -18,8 +18,8 @@
 					<Image Height="110" Width="110"/>
 				</Border>
 				<StackPanel Grid.Column="1" Margin="10,0,0,0">
-					<TextBlock Text="{Binding Content}" Style="{StaticResource TitleTextBlockStyle}"/>
-					<TextBlock Text="{Binding Date}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap"/>
+					<TextBlock Text="{Binding Title}" Style="{StaticResource TitleTextBlockStyle}"/>
+					<TextBlock Text="{Binding Content}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="Wrap"/>
 				</StackPanel>
 			</Grid>
 		</DataTemplate>
@@ -53,14 +53,14 @@
 			<HubSection Header="nyheter">
 				<DataTemplate>
 					<Grid>
-						<ListView ItemTemplate="{StaticResource NewsVmiTemplate}" ItemsSource="{Binding NewsItems}" />
+						<ListView ItemTemplate="{StaticResource NewsVmiTemplate}" ItemsSource="{Binding NewsItems}" Style="{StaticResource AppListViewStyle}" />
 					</Grid>
 				</DataTemplate>
 			</HubSection>
 			<HubSection Header="kontakter">
 				<DataTemplate>
 					<Grid>
-						<ListView ItemTemplate="{StaticResource ContactVmiTemplate}" ItemsSource="{Binding ContactItems}"/>
+						<ListView ItemTemplate="{StaticResource ContactVmiTemplate}" ItemsSource="{Binding ContactItems}" Style="{StaticResource AppListViewStyle}"/>
 					</Grid>
 				</DataTemplate>
 			</HubSection>

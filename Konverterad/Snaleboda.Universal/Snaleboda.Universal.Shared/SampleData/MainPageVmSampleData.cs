@@ -20,7 +20,7 @@ namespace Snaleboda.Universal.SampleData
             {
                 CreateNews("Xamarin köpte Microsoft", "lång text", 2),
                 CreateNews("Xamarin köpte", "lång text", 2),
-                CreateNews("Xamarin", "lång text", 19),
+                CreateNews("Xamarin", "lång text igen och igen", 25),
                 CreateNews("Xamarin köpte Microsoft", "lång text", 10),
             };
         }
