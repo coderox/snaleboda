@@ -1,0 +1,26 @@
+﻿<ViewModels:MainPageVm xmlns:ViewModels="using:Snaleboda.Universal.ViewModels">
+	<ViewModels:MainPageVm.ContactItems>
+		<ViewModels:ContactVmi Email="Pharetra natoque venenatis placerat" Id="Nascetur leo" Name="Lacus ultricies" Phone="Lorem magna odio mus massa"/>
+		<ViewModels:ContactVmi Email="Metus rhoncus sociosqu primis suscipit" Id="Pulvinar vulputate posuere ornare" Name="Vestibulum curabitur sagittis platea potenti" Phone="Nec senectus pretium vestibulum non"/>
+		<ViewModels:ContactVmi Email="Convallis viverra" Id="Morbi torquent" Name="Orci sodales phasellus consequat ultrices" Phone="Neque netus vehicula nulla"/>
+		<ViewModels:ContactVmi Email="Semper praesent" Id="Rutrum dignissim" Name="Pede elementum volutpat" Phone="Maecenas sapien"/>
+		<ViewModels:ContactVmi Email="Sed taciti risus fermentum" Id="Aliquam quam per integer quis" Name="Sociis porta adipiscing" Phone="Quisque accumsan purus facilisis vivamus"/>
+		<ViewModels:ContactVmi Email="Parturient vestibulum class commodo" Id="Aliquam urna aliquet velit bibendum" Name="Vitae cras duis sem" Phone="Sit fringilla blandit habitasse"/>
+		<ViewModels:ContactVmi Email="Dictumst adipiscing hendrerit eleifend" Id="Vel nam tellus nunc conubia" Name="Curae vestibulum tempor" Phone="Amet cubilia tempus"/>
+		<ViewModels:ContactVmi Email="Diam etiam varius aenean" Id="Tortor himenaeos ante" Name="Arcu parturient donec vestibulum imperdiet" Phone="Malesuada turpis"/>
+		<ViewModels:ContactVmi Email="Egestas parturient vestibulum" Id="Facilisi faucibus fusce dapibus" Name="Vestibulum adipiscing" Phone="Mauris penatibus"/>
+		<ViewModels:ContactVmi Email="Lorem sed dis adipiscing tincidunt" Id="Euismod vestibulum" Name="Nullam habitant porttitor" Phone="Feugiat eget"/>
+	</ViewModels:MainPageVm.ContactItems>
+	<ViewModels:MainPageVm.NewsItems>
+		<ViewModels:NewsVmi Content="Amet class" Date="Curae aenean donec sed" Id="Curabitur maecenas cras" Title="Duis nunc phasellus nam consequat"/>
+		<ViewModels:NewsVmi Content="Dignissim quisque accumsan est" Date="Ante vestibulum adipiscing" Id="Aliquam mauris praesent etiam convallis" Title="Integer dis"/>
+		<ViewModels:NewsVmi Content="Eleifend vestibulum" Date="Elementum nullam" Id="Vivamus bibendum fusce aliquam parturient" Title="Dictumst lorem"/>
+		<ViewModels:NewsVmi Content="Vestibulum nec auctor" Date="Morbi adipiscing congue nulla" Id="Aptent aliquet hac" Title="Blandit leo mus commodo"/>
+		<ViewModels:NewsVmi Content="Vestibulum fermentum per proin dictum" Date="Vestibulum fringilla lectus" Id="Parturient facilisis non" Title="Arcu cursus diam"/>
+		<ViewModels:NewsVmi Content="Libero sed" Date="Sem eget ligula cubilia" Id="Facilisi habitasse adipiscing conubia" Title="Parturient vestibulum"/>
+		<ViewModels:NewsVmi Content="Enim sit himenaeos" Date="Erat luctus" Id="Litora augue vestibulum dapibus elit" Title="Hendrerit adipiscing"/>
+		<ViewModels:NewsVmi Content="Nam dolor sed" Date="Eros nibh mollis malesuada" Id="Magnis egestas mattis euismod" Title="Mauris imperdiet vel"/>
+		<ViewModels:NewsVmi Content="Inceptos parturient" Date="Gravida nisi interdum dis" Id="Parturient feugiat vestibulum vestibulum penatibus" Title="Porttitor faucibus adipiscing habitant"/>
+		<ViewModels:NewsVmi Content="Lacinia tristique laoreet felis nisl" Date="Ipsum nunc justo hac" Id="Iaculis montes tincidunt" Title="Lobortis nostra est fames"/>
+	</ViewModels:MainPageVm.NewsItems>
+</ViewModels:MainPageVm>

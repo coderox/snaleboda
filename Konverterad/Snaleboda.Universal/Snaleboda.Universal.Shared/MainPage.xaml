@@ -6,7 +6,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:SampleData="using:Snaleboda.Universal.SampleData"
     x:Class="Snaleboda.Universal.MainPage"
-    mc:Ignorable="d" d:DataContext="{d:DesignInstance SampleData:MainPageVmSampleData, IsDesignTimeCreatable=True}" RequestedTheme="Light">
+    mc:Ignorable="d" 
+	d:DataContext="{d:DesignInstance SampleData:MainPageVmSampleData, IsDesignTimeCreatable=True}" RequestedTheme="Light">
 	<Page.Resources>
 		<DataTemplate x:Key="NewsVmiTemplate">
 			<Grid Height="110" Width="480" Margin="10" >
