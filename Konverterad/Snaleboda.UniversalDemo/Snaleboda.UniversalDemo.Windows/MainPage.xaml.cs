@@ -2,6 +2,7 @@
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 using Windows.UI.Xaml.Navigation;
+using Snaleboda.UniversalDemo.SampleData;
 using Snaleboda.UniversalDemo.ViewModels;
 
 namespace Snaleboda.UniversalDemo
@@ -20,7 +21,8 @@ namespace Snaleboda.UniversalDemo
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
-            DataContext = _vm = new MainPageVm();
+            DataContext = _vm = new MainPageVmSampleData();
+            //DataContext = _vm = new MainPageVm();
             await _vm.InitAsync();
             base.OnNavigatedTo(e);
         }
