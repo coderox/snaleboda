@@ -6,21 +6,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:SampleData="using:Snaleboda.Universal.SampleData"
     x:Class="Snaleboda.Universal.MainPage"
-    mc:Ignorable="d" d:DataContext="{d:DesignInstance SampleData:MainPageVmSampleData, IsDesignTimeCreatable=True}">
+    mc:Ignorable="d" d:DataContext="{d:DesignInstance SampleData:MainPageVmSampleData, IsDesignTimeCreatable=True}" RequestedTheme="Light">
 	<Page.Resources>
 		<DataTemplate x:Key="NewsVmiTemplate">
 			<Grid Height="110" Width="480" Margin="10" >
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+				</Grid.RowDefinitions>
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="Auto"/>
-					<ColumnDefinition Width="*"/>
-				</Grid.ColumnDefinitions>
-				<Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
-					<Image Height="110" Width="110"/>
-				</Border>
-				<StackPanel Grid.Column="1" Margin="10,0,0,0">
-					<TextBlock Text="{Binding Title}" Style="{StaticResource TitleTextBlockStyle}"/>
-					<TextBlock Text="{Binding Content}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="Wrap"/>
-				</StackPanel>
+				</Grid.ColumnDefinitions><TextBlock Text="{Binding Title}" Style="{StaticResource TitleTextBlockStyle}"/>
+				<TextBlock Text="{Binding Content}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="Wrap" Grid.Row="1"/>
 			</Grid>
 		</DataTemplate>
 		<DataTemplate x:Key="ContactVmiTemplate">
@@ -36,6 +33,11 @@
 				</StackPanel>
 			</Grid>
 		</DataTemplate>
+		<DataTemplate x:Key="AppHubHeaderTemplate">
+			<Grid Margin="0,20,0,0">
+			<TextBlock Text="{Binding}" FontWeight="Normal" FontSize="64" />
+			</Grid>
+		</DataTemplate>
 	</Page.Resources>
 	<Page.BottomAppBar>
 		<CommandBar>
@@ -43,11 +45,18 @@
 		</CommandBar>
 	</Page.BottomAppBar>
 
-	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-		<Hub >
-			<HubSection Header="Snåleboda" Width="400">
+	<Grid Background="{StaticResource AppYellowBrush}">
+		<Hub HeaderTemplate="{StaticResource AppHubHeaderTemplate}" Header="Snåleboda" >
+			<HubSection Width="400">
 				<DataTemplate>
-					<Grid/>
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition/>
+						</Grid.RowDefinitions>
+						<Image Source="ms-appx:///Assets/logo_black.png"/>
+						<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Super App" VerticalAlignment="Top" Grid.Row="1" Style="{StaticResource HeaderTextBlockStyle}"/>
+					</Grid>
 				</DataTemplate>
 			</HubSection>
 			<HubSection Header="nyheter">

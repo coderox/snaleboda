@@ -8,6 +8,8 @@
 			<ResourceDictionary.MergedDictionaries>
 				<ResourceDictionary Source="ms-appx:///PlatformResources.xaml"/>
 			</ResourceDictionary.MergedDictionaries>
+			<Color x:Key="AppYellowColor">#FFFFE699</Color>
+			<SolidColorBrush x:Key="AppYellowBrush" Color="{StaticResource AppYellowColor}"/>
 		</ResourceDictionary>
 	</Application.Resources>
 

@@ -12,6 +12,18 @@
     	<ListView Style="{StaticResource AppListViewStyle}">
     		<TextBlock TextWrapping="Wrap" Text="TextBlock" Style="{StaticResource CaptionTextBlockStyle}"/>
     	</ListView>
+    	<Hub Header="Hub">
+    		<HubSection Header="HubSection 0">
+    			<DataTemplate>
+    				<Grid/>
+    			</DataTemplate>
+    		</HubSection>
+    		<HubSection Header="HubSection 1">
+    			<DataTemplate>
+    				<Grid/>
+    			</DataTemplate>
+    		</HubSection>
+    	</Hub>
 
     </Grid>
 </Page>
