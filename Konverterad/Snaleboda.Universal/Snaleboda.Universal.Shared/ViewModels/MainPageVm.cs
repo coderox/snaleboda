@@ -17,7 +17,16 @@ namespace Snaleboda.Universal.ViewModels
         {
         }
 
-        public async Task InitAsync()
+        public Task InitAsync()
+        {
+            return Task.WhenAll(new Task[]
+            {
+                InitNewsAsync(),
+                InitContactsAsync()
+            });
+        }
+
+        private async Task InitNewsAsync()
         {
             var newsService = new NewsService();
             var items = await newsService.GetNewsAsync();
@@ -31,6 +40,24 @@ namespace Snaleboda.Universal.ViewModels
                 Title = arg.Title,
                 Content = arg.Content,
                 Id = arg.Id
+            };
+        }
+
+        private async Task InitContactsAsync()
+        {
+            var contactService = new ContactService();
+            var items = await contactService.GetContactsAsync();
+            ContactItems = items.Select(CreateContactVmi).ToList();
+        }
+
+        private ContactVmi CreateContactVmi(Contact arg)
+        {
+            return new ContactVmi
+            {
+                Name = arg.Name,
+                Email = arg.Email,
+                Id = arg.Id,
+                Phone = arg.Phone
             };
         }
     }
