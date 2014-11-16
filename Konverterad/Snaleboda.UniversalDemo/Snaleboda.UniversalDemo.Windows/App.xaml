@@ -5,6 +5,9 @@
     xmlns:local="using:Snaleboda.UniversalDemo">
 	<Application.Resources>
 		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Platform.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
 			<Color x:Key="AppYellowColor">#FFFFE699</Color>
 			<SolidColorBrush x:Key="AppYellowBrush" Color="{StaticResource AppYellowColor}"/>
 		</ResourceDictionary>
