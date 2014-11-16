@@ -12,7 +12,7 @@ using Android.Views;
 using Android.Widget;
 using Cirrious.MvvmCross.Binding.Droid.BindingContext;
 using Cirrious.MvvmCross.Droid.Fragging.Fragments;
-using Snaleboda.Library.ViewModels;
+using Snaleboda.Core.ViewModels;
 
 namespace Snaleboda.Droid.Views
 {

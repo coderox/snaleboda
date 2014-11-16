@@ -11,7 +11,7 @@ namespace Snaleboda.Core.ViewModels
         : MvxViewModel
     {
         private readonly IAsyncServiceAgent _service;
-        private string _hello = "Hello MvvmCross";
+        private string _hello = "Welcome to Snåleboda";
         public string Hello
         {
             get { return _hello; }

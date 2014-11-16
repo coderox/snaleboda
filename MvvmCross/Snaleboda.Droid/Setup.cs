@@ -6,6 +6,8 @@ using Cirrious.MvvmCross.Droid.Platform;
 using Cirrious.MvvmCross.ViewModels;
 using Snaleboda.Droid.Utilities;
 using Snaleboda.Library.Interfaces;
+using Snaleboda.Library.Services;
+using Snaleboda.Core.ViewModels;
 
 namespace Snaleboda.Droid
 {
@@ -17,7 +19,7 @@ namespace Snaleboda.Droid
 
         protected override IMvxApplication CreateApp()
         {
-            return new Snaleboda.Library.App();
+            return new Snaleboda.Core.App();
         }
 		
         protected override IMvxTrace CreateDebugTrace()
@@ -32,6 +34,14 @@ namespace Snaleboda.Droid
             Mvx.RegisterType<HttpMessageHandler,ModernHttpClient.NativeMessageHandler>();            
             Mvx.RegisterType<IHttpClientProvider, HttpClientProvider>();
             Mvx.RegisterType<IPlatformSpecificsProvider, PlatformSpecificsProvider>();
+            Mvx.RegisterType<IAsyncServiceAgent, AsyncServiceAgent>();
+
+            Mvx.RegisterType<ISerializer, JsonSerializer>();
+
+            Mvx.RegisterType<MainViewModel, MainViewModel>();
+            Mvx.RegisterType<NewsViewModel, NewsViewModel>();
+            Mvx.RegisterType<ContactsViewModel, ContactsViewModel>();
+            Mvx.RegisterType<ContactViewModel, ContactViewModel>();
         }
     }
 }
