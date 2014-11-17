@@ -1,0 +1,72 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Snaleboda.Universal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:SampleData="using:Snaleboda.Universal.SampleData"
+    x:Class="Snaleboda.Universal.MainPage"
+    mc:Ignorable="d" d:DataContext="{d:DesignInstance SampleData:MainPageVmSampleData, IsDesignTimeCreatable=True}"
+    RequestedTheme="Light">
+    
+	<Page.Resources>
+		<DataTemplate x:Key="NewsVmiTemplate">
+			<Grid Height="110" Width="480" Margin="10" >
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<StackPanel Grid.Column="1" Margin="10,0,0,0">
+					<TextBlock Text="{Binding Title}" Style="{StaticResource TitleTextBlockStyle}"/>
+					<TextBlock Text="{Binding Content}" TextWrapping="Wrap"/>
+				</StackPanel>
+			</Grid>
+		</DataTemplate>
+		<DataTemplate x:Key="ContactVmiTemplate">
+			<Grid Height="110" Width="400" Margin="10" >
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<StackPanel Grid.Column="1" Margin="10,0,0,0">
+					<TextBlock Text="{Binding Name}" Style="{StaticResource TitleTextBlockStyle}"/>
+					<TextBlock Text="{Binding Phone}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap"/>
+					<TextBlock Text="{Binding Email}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap"/>
+				</StackPanel>
+			</Grid>
+		</DataTemplate>
+	</Page.Resources>
+    
+	<Page.BottomAppBar>
+		<CommandBar>
+			<AppBarButton x:Name="ReportIncidentButton" Icon="Add" Label="Rapportera"/>
+		</CommandBar>
+	</Page.BottomAppBar>
+
+    <Grid Background="{ThemeResource BackgroundBrush}">
+		<Hub Foreground="{ThemeResource ForegroundBrush}">
+            <HubSection Header="Snåleboda" Width="400" Foreground="{ThemeResource ForegroundBrush}">
+				<DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Hello}" Foreground="{ThemeResource ForegroundBrush}" FontSize="20"/>
+                        <Image Source="/Assets/logo_black.png" Stretch="UniformToFill"></Image>
+                    </StackPanel>
+                </DataTemplate>
+			</HubSection>
+            <HubSection Header="nyheter" Foreground="{ThemeResource ForegroundBrush}">
+				<DataTemplate>
+					<Grid>
+						<ListView ItemTemplate="{StaticResource NewsVmiTemplate}" ItemsSource="{Binding NewsItems}" Style="{StaticResource AppListViewStyle}" />
+					</Grid>
+				</DataTemplate>
+			</HubSection>
+            <HubSection Header="kontakter" Foreground="{ThemeResource ForegroundBrush}">
+				<DataTemplate>
+					<Grid>
+						<ListView ItemTemplate="{StaticResource ContactVmiTemplate}" ItemsSource="{Binding ContactItems}" Style="{StaticResource AppListViewStyle}"/>
+					</Grid>
+				</DataTemplate>
+			</HubSection>
+		</Hub>
+	</Grid>
+</Page>

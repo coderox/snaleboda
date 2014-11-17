@@ -1,0 +1,19 @@
+﻿<Application
+    x:Class="Snaleboda.Universal.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Snaleboda.Universal">
+	<Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="ms-appx:///PlatformResources.xaml"/>
+                <ResourceDictionary>
+                    <Color x:Key="OrangeBackground">#FFE699</Color>
+                    <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource OrangeBackground}"/>
+                    <SolidColorBrush x:Key="ForegroundBrush" Color="Black"/>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Application.Resources>
+
+</Application>
