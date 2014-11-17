@@ -53,6 +53,12 @@
     <Compile Include="MainViewModelTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Snaleboda.Core\Snaleboda.Core.csproj">
+      <Project>{1f254b96-f7ef-4b39-b7e3-be78cd531df7}</Project>
+      <Name>Snaleboda.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
