@@ -11,8 +11,12 @@ namespace Snaleboda.Core.ViewModels
         : MvxViewModel
     {
         private readonly IAsyncServiceAgent _service;
-        public string Hello { get; set; }
-        public bool ShowLogo { get; set; }
+        private string _hello = "Welcome to Snåleboda";
+        public string Hello
+        {
+            get { return _hello; }
+            set { _hello = value; RaisePropertyChanged(() => Hello); }
+        }
 
         public NewsViewModel News { get; private set; }
         public ContactsViewModel Contacts { get; private set; }
@@ -23,9 +27,6 @@ namespace Snaleboda.Core.ViewModels
 
             News = new NewsViewModel(service);
             Contacts = new ContactsViewModel(service);
-
-            Hello = "Welcome to Snåleboda";
-            ShowLogo = false;
         }
 
         public override async void Start()
