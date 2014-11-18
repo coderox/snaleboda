@@ -3,6 +3,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Windows.UI.Core;
 using Windows.Web.Syndication;
+//using Snaleboda.Xamarin.Core.Models;
+//using Snaleboda.Xamarin.Core.Services;
 
 namespace Snaleboda.UniversalDemo.ViewModels
 {

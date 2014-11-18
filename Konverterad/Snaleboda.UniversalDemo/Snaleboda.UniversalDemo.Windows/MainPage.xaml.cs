@@ -21,8 +21,8 @@ namespace Snaleboda.UniversalDemo
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
-            DataContext = _vm = new MainPageVmSampleData();
-            //DataContext = _vm = new MainPageVm();
+            //DataContext = _vm = new MainPageVmSampleData();
+            DataContext = _vm = new MainPageVm();
             await _vm.InitAsync();
             base.OnNavigatedTo(e);
         }
